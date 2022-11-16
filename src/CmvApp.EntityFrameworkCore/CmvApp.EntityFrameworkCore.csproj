@@ -1,0 +1,43 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\common.props" />
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <RootNamespace>CmvApp</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CmvApp.Domain\CmvApp.Domain.csproj" />
+    <PackageReference Include="Volo.Abp.EntityFrameworkCore.SqlServer" Version="6.0.1" />
+    <PackageReference Include="Volo.Abp.PermissionManagement.EntityFrameworkCore" Version="6.0.1" />
+    <PackageReference Include="Volo.Abp.SettingManagement.EntityFrameworkCore" Version="6.0.1" />
+    <PackageReference Include="Volo.Abp.OpenIddict.EntityFrameworkCore" Version="6.0.1" />
+    <PackageReference Include="Volo.Abp.BackgroundJobs.EntityFrameworkCore" Version="6.0.1" />
+    <PackageReference Include="Volo.Abp.AuditLogging.EntityFrameworkCore" Version="6.0.1" />
+    <PackageReference Include="Volo.Abp.FeatureManagement.EntityFrameworkCore" Version="6.0.1" />
+    <PackageReference Include="Volo.Abp.BlobStoring.Database.EntityFrameworkCore" Version="6.0.1" />
+    <PackageReference Include="Volo.Abp.Identity.Pro.EntityFrameworkCore" Version="6.0.1" />
+    <PackageReference Include="Volo.Abp.LanguageManagement.EntityFrameworkCore" Version="6.0.1" />
+    <PackageReference Include="Volo.Saas.EntityFrameworkCore" Version="6.0.1" />
+    <PackageReference Include="Volo.Abp.TextTemplateManagement.EntityFrameworkCore" Version="6.0.1" />
+    <PackageReference Include="Volo.Abp.Gdpr.EntityFrameworkCore" Version="6.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.5">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+      <PrivateAssets>compile; contentFiles; build; buildMultitargeting; buildTransitive; analyzers; native</PrivateAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v21.2">
+      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\DevExpress 21.2\Components\Offline Packages\devexpress.data\21.2.7\lib\netstandard2.0\DevExpress.Data.v21.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Xpo.v21.2">
+      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\DevExpress 21.2\Components\Offline Packages\devexpress.xpo\21.2.7\lib\netstandard2.0\DevExpress.Xpo.v21.2.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

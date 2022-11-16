@@ -1,0 +1,32 @@
+@page
+@using Microsoft.AspNetCore.Mvc.Localization
+@using CmvApp.Localization
+@using Volo.Abp.AspNetCore.Mvc.UI.Bootstrap.TagHelpers.Modal
+@using CmvApp.Web.Pages.Products
+@using CmvApp.Products;
+@using System.Globalization
+@inject IHtmlLocalizer<CmvAppResource> L
+@model CreateModalModel
+@{
+    Layout = null;
+}
+
+<form data-ajaxForm="true" asp-page="/Products/CreateModal" autocomplete="off">
+    <abp-modal id="ProductCreateModal">
+        <abp-modal-header title="@L["NewProduct"].Value"></abp-modal-header>
+
+        <abp-modal-body>
+                    
+            <abp-input asp-for="Product.Name" />
+
+            <abp-input asp-for="Product.Description" />
+
+            <abp-input asp-for="Product.Price" />
+
+                    
+                
+        </abp-modal-body>
+
+        <abp-modal-footer buttons="@(AbpModalButtons.Cancel|AbpModalButtons.Save)"></abp-modal-footer>
+    </abp-modal>
+</form>
